@@ -1,0 +1,131 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistan Paneli</title>
+    <link rel="stylesheet" href="~/css/assistantDashboard.css" />
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sol taraf: Logo ve Navbar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Hastane Logosu</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" id="appointments-link">Randevularım</a></li>
+                    <li><a href="#" id="edit-profile-link">Bilgilerimi Düzenle</a></li>
+                    <li><a href="#" id="create-appointment-link">Randevu Oluştur</a></li>
+                    <li><a href="#" id="logout-link">Çıkış Yap</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Sağ Taraf: Üst Bar ve İçerik -->
+        <div class="top-header">
+            <span>Hastane Adı</span>
+        </div>
+
+        <div class="main-content">
+            <!-- Randevularım Bölümü -->
+            <div id="appointments-section" class="content-section active">
+                <h3>Randevularım</h3>
+                <table class="appointments-table">
+                    <thead>
+                        <tr>
+                            <th>Doktor</th>
+                            <th>Tarih</th>
+                            <th>Saat</th>
+                            <th>Tür</th>
+                            <th>İşlem</th>
+                        </tr>
+                    </thead>
+                    <tbody id="appointments-list">
+                        <!-- Randevu listesi buraya JavaScript ile doldurulacak -->
+                    </tbody>
+                </table>
+                <div id="appointments-message" class="message-box"></div>
+            </div>
+
+            <!-- Bilgileri Düzenle Bölümü -->
+            <div id="edit-profile-section" class="content-section">
+                <h3>Bilgilerimi Düzenle</h3>
+                <form id="edit-profile-form">
+                    <div class="form-group">
+                        <label for="name">Adınız:</label>
+                        <input type="text" id="name" name="Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">Soyadınız:</label>
+                        <input type="text" id="surname" name="Surname" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-posta:</label>
+                        <input type="email" id="email" name="Email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Telefon Numarası:</label>
+                        <input type="text" id="phoneNumber" name="PhoneNumber" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn">Bilgilerimi Güncelle</button>
+                    <div id="profile-message" class="message-box"></div>
+                </form>
+            </div>
+
+            <!-- Randevu Oluştur Bölümü -->
+            <div id="create-appointment-section" class="content-section">
+                <h3>Randevu Oluştur</h3>
+                <form id="create-appointment-form">
+                    <div class="form-group">
+                        <label for="doctor-select">Doktor Seçiniz</label>
+                        <select id="doctor-select" name="DoctorId" class="form-control" required>
+                            <!-- Doktorlar buraya JavaScript ile doldurulacak -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-type-select">Randevu Türü:</label>
+                        <select id="appointment-type-select" name="AppointmentTypeId" class="form-control" required>
+                            <!-- Randevu tipleri buraya JavaScript ile doldurulacak -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-date">Randevu Tarihi:</label>
+                        <input type="date" id="appointment-date" name="AppointmentDate" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-hour-select">Randevu Saati:</label>
+                        <select id="appointment-hour-select" name="StartHour" class="form-control" required>
+                            <!-- Uygun saatler buraya JavaScript ile doldurulacak -->
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Randevuyu Kaydet</button>
+                    <div id="appointment-message" class="message-box"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Randevu İptal Pop-up'ı -->
+    <div id="cancellation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Randevu İptal Nedeni</h3>
+            <p><strong>Doktor:</strong> <span id="modal-doctor-name"></span></p>
+            <p><strong>Tarih:</strong> <span id="modal-appointment-date"></span></p>
+            <textarea id="cancellation-reason" placeholder="Lütfen iptal nedeninizi belirtin..." required></textarea>
+            <div class="modal-buttons">
+                <button class="btn cancel-btn" id="modal-close-btn">Vazgeç</button>
+                <button class="btn confirm-cancel-btn" id="modal-confirm-btn">Randevuyu İptal Et</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript dosyası -->
+    <script src="~/js/assistantDashboard.js"></script>
+</body>
+</html>

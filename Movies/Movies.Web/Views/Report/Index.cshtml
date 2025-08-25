@@ -1,0 +1,72 @@
+@model Movies.Web.ViewModels.ReportViewModel
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>🎬 Film Raporları</title>
+    <link rel="stylesheet" href="~/css/ReportIndex.css">
+</head>
+
+<body>
+    <nav class="top-menu">
+        <a href="/">🏠 Anasayfa</a>
+        <a href="/Movies">🎞 Filmler</a>
+        <a href="/Actors">🎭 Oyuncular</a>
+        <a href="/Report">🎬 Film Raporları</a>
+    </nav>
+    <div class="container">
+        <h2>🎬 Film Raporları</h2>
+
+        <h3>Filmlere Göre Oyuncular</h3>
+        <div class="cards">
+            @foreach (var film in Model.MoviesGrouped)
+            {
+                <div class="card">
+                    <h4>@film.FilmAdi (@film.Yil) - Tür: @film.Tur</h4>
+                    @if (film.Oyuncular.Any())
+                    {
+                        <ul>
+                            @foreach (var actor in film.Oyuncular)
+                            {
+                                <li>@actor.AdSoyad - Rol: @actor.Rol</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p>Bu filmde kayıtlı oyuncu yok.</p>
+                    }
+                </div>
+            }
+        </div>
+
+        <hr />
+
+        <h3>Oyunculara Göre Filmler</h3>
+        <div class="cards">
+            @foreach (var actor in Model.ActorsGrouped)
+            {
+                <div class="card">
+                    <h4>@actor.ActorAdiSoyadi</h4>
+                    @if (actor.Filmler.Any())
+                    {
+                        <ul>
+                            @foreach (var movie in actor.Filmler)
+                            {
+                                <li>@movie.Ad (@movie.Yil) - Tür: @movie.Tur - Rol: @movie.Rol</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p>Bu oyuncunun kaydedilmiş filmi yok.</p>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</body>
+
+</html>

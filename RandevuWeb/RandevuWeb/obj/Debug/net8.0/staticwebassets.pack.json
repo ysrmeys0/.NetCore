@@ -1,0 +1,313 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/obj/Debug/net8.0/scopedcss/projectbundle/RandevuWeb.bundle.scp.css",
+      "PackagePath": "staticwebassets/RandevuWeb.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/css/Index.css",
+      "PackagePath": "staticwebassets/css/Index.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/css/adminDashboard.css",
+      "PackagePath": "staticwebassets/css/adminDashboard.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/css/adminLogin.css",
+      "PackagePath": "staticwebassets/css/adminLogin.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/css/assistantDashboard.css",
+      "PackagePath": "staticwebassets/css/assistantDashboard.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/css/doctorDashboard.css",
+      "PackagePath": "staticwebassets/css/doctorDashboard.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/css/patientDashboard.css",
+      "PackagePath": "staticwebassets/css/patientDashboard.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/js/Index.js",
+      "PackagePath": "staticwebassets/js/Index.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/js/adminDashboard.js",
+      "PackagePath": "staticwebassets/js/adminDashboard.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/js/adminLogin.js",
+      "PackagePath": "staticwebassets/js/adminLogin.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/js/assistantDashboard.js",
+      "PackagePath": "staticwebassets/js/assistantDashboard.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/js/doctorDashboard.js",
+      "PackagePath": "staticwebassets/js/doctorDashboard.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/js/patientDashboard.js",
+      "PackagePath": "staticwebassets/js/patientDashboard.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/ysrmeys/Desktop/RandevuWeb/RandevuWeb/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.RandevuWeb.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.RandevuWeb.props",
+      "PackagePath": "build\\RandevuWeb.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.RandevuWeb.props",
+      "PackagePath": "buildMultiTargeting\\RandevuWeb.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.RandevuWeb.props",
+      "PackagePath": "buildTransitive\\RandevuWeb.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,68 @@
+@model Movies.Web.Models.Actor
+
+@{
+    ViewData["Title"] = "Oyuncu Detayları";
+    Layout = null; /* Eğer ortak layout kullanmıyorsan */
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <title>@ViewData["Title"] - Movies DB</title>
+    <link rel="stylesheet" href="~/css/MoviesIndex.css" />
+</head>
+<body>
+    <!-- Üst menü -->
+    <nav class="top-menu">
+        <a href="/">🏠 Anasayfa</a>
+        <a href="/Movies">🎞 Filmler</a>
+        <a href="/Actors">🎭 Oyuncular</a>
+        <a href="/Report">🎬 Film Raporları</a>
+    </nav>
+
+    <main class="container mt-4">
+        <h1>@Model.Ad @Model.Soyad</h1>
+        <hr />
+
+        <h3>Oynadığı Filmler</h3>
+
+        @if (Model.MovieActors != null && Model.MovieActors.Any())
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Film</th>
+                        <th>Yıl</th>
+                        <th>Rol</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var ma in Model.MovieActors)
+                {
+                    <tr>
+                        <td>
+                            <a asp-controller="Movies" asp-action="Details" asp-route-id="@ma.MovieId">
+                                @ma.Movie.Ad
+                            </a>
+                        </td>
+                        <td>@ma.Movie.Yil</td>
+                        <td>@ma.Rol</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>Bu oyuncunun henüz kaydedilmiş filmi yok.</p>
+        }
+
+        <a asp-action="Index" class="btn btn-secondary">⬅ Oyuncu Listesine Dön</a>
+    </main>
+
+    <footer>
+        <p>© 2025 Movies Database Portal</p>
+    </footer>
+</body>
+</html>

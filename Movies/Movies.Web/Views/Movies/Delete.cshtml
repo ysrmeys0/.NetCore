@@ -1,0 +1,35 @@
+@model Movies.Web.Models.Movie
+
+@{
+    ViewData["Title"] = "Film Sil";
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movies DB Portal</title>
+    <link rel="stylesheet" href="~/css/MoviesIndex.css">
+</head>
+
+<body>
+    <nav class="top-menu">
+        <a href="/">🏠 Anasayfa</a>
+        <a href="/Movies">🎞 Filmler</a>
+        <a href="/Actors">🎭 Oyuncular</a>
+        <a href="/Report">🎬 Film Raporları</a>
+    </nav>
+    <div class="container mt-4">
+        <h2 class="text-danger">⚠ Film Sil</h2>
+        <p>“<strong>@Model.Ad</strong>” adlı filmi silmek istediğinizden emin misiniz?</p>
+
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="MovieId" />
+            <button type="submit" class="btn btn-danger">Sil</button>
+            <a asp-action="Index" class="btn btn-secondary">İptal</a>
+        </form>
+    </div>
+</body>
+
+</html>

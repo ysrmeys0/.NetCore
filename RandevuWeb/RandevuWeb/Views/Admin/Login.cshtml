@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Admin Giriş";
+    Layout = "_Layout"; // Opsiyonel, ana düzeni kullanabiliriz
+}
+
+<div class="container">
+    <h1>Admin Giriş</h1>
+    <!-- adminLogin.js'deki JavaScript kodunun erişeceği form -->
+    <form id="admin-login-form">
+        <div class="form-group">
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="Email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Telefon Numarası:</label>
+            <input type="text" id="phoneNumber" name="PhoneNumber" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Giriş Yap</button>
+    </form>
+</div>
+
+@section Scripts {
+    <!-- adminLogin.js dosyasını doğru şekilde eklediğinizden emin olun -->
+    <script src="~/js/adminLogin.js"></script>
+}

@@ -1,0 +1,59 @@
+@model Movies.Web.Models.Movie
+
+@{
+    ViewData["Title"] = "Film Düzenle";
+}
+
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movies DB Portal</title>
+    <link rel="stylesheet" href="~/css/MoviesIndex.css">
+</head>
+
+<body>
+    <nav class="top-menu">
+        <a href="/">🏠 Anasayfa</a>
+        <a href="/Movies">🎞 Filmler</a>
+        <a href="/Actors">🎭 Oyuncular</a>
+        <a href="/Report">🎬 Film Raporları</a>
+    </nav>
+    <div class="container mt-4">
+        <h2 class="text-primary">🎬 Film Düzenle</h2>
+
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="MovieId" />
+
+            <div class="mb-3">
+                <label asp-for="Ad" class="form-label">Film Adı</label>
+                <input asp-for="Ad" class="form-control" />
+                <span asp-validation-for="Ad" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Tur" class="form-label">Tür</label>
+                <input asp-for="Tur" class="form-control" />
+                <span asp-validation-for="Tur" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Yil" class="form-label">Yıl</label>
+                <input asp-for="Yil" class="form-control" type="number" />
+                <span asp-validation-for="Yil" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-success">Kaydet</button>
+            <a asp-action="Index" class="btn btn-secondary">İptal</a>
+        </form>
+    </div>
+</body>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+</html>

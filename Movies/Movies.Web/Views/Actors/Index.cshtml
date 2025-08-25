@@ -1,0 +1,108 @@
+@model IEnumerable<Movies.Web.Models.Actor>
+
+@{
+    ViewData["Title"] = "Oyuncular";
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movies DB Portal</title>
+    <link rel="stylesheet" href="~/css/MoviesIndex.css">
+
+</head>
+
+<body>
+    <nav class="top-menu">
+        <a href="/">🏠 Anasayfa</a>
+        <a href="/Movies">🎞 Filmler</a>
+        <a href="/Actors">🎭 Oyuncular</a>
+        <a href="/Report">🎬 Film Raporları</a>
+    </nav>
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="text-primary"><i class="bi bi-people-fill"></i> Oyuncular</h2>
+            <a asp-action="Create" class="btn btn-success">
+                <i class="bi bi-plus-circle"></i> Yeni Oyuncu Ekle
+            </a>
+        </div>
+
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Error"]</div>
+        }
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success">@TempData["Success"]</div>
+        }
+
+
+        <!-- Oyuncuyu Filme Ekleme Formu -->
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h4 class="text-primary mb-3">Oyuncuyu Filme Ekle</h4>
+                <form asp-action="AddToMovie" method="post">
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label>Oyuncu</label>
+                            <select name="actorId" class="form-select" required>
+                                <option value="">Seçiniz...</option>
+                                @foreach (var actor in Model)
+                                {
+                                    <option value="@actor.ActorId">@actor.Ad @actor.Soyad</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Film</label>
+                            <select name="movieId" class="form-select" required>
+                                <option value="">Seçiniz...</option>
+                                @foreach (var movie in ViewBag.Movies)
+                                {
+                                    <option value="@movie.Value">@movie.Text</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Rol</label>
+                            <input type="text" name="rol" class="form-control" placeholder="Rolü girin" required />
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Ekle</button>
+                </form>
+            </div>
+        </div>
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <table class="table table-hover table-striped align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Ad</th>
+                            <th>Soyad</th>
+                            <th style="width: 180px;">İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Ad</td>
+                                <td>@item.Soyad</td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.ActorId"
+                                        class="btn btn-sm btn-warning text-white">Düzenle</a>
+                                    <a asp-action="Delete" asp-route-id="@item.ActorId"
+                                        class="btn btn-sm btn-danger">Sil</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

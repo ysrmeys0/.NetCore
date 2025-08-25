@@ -1,0 +1,152 @@
+/* Genel Sayfa Stilleri */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+/* Ana Konteyner */
+.login-container {
+    display: flex;
+    /* width: 100vw; - Zaten doğru ama bazı tarayıcılarda sorun çıkarabilir */
+    /* height: 100vh; - Zaten doğru ama bazı tarayıcılarda sorun çıkarabilir */
+    position: absolute; /* Tam ekranı kaplaması için */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Her bir bölüm için ortak stiller */
+.login-section {
+    display: flex;
+    justify-content: center; /* Yatayda ortalama */
+    align-items: center;     /* Dikeyde ortalama */
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    transition: flex-grow 0.6s ease-in-out;
+    flex-basis: 0;
+}
+
+/* Bölümlerin arkaplan renkleri */
+.hospital-panel {
+    background-color: #f0f8ff;
+    color: #333;
+}
+.patient-panel {
+    background-color: #61586d;
+}
+.staff-panel {
+    background-color: #b7c3d4;
+}
+
+/* --- BAŞLANGIÇ DURUMU --- */
+.hospital-panel { flex-grow: 8; }
+.patient-panel  { flex-grow: 1; }
+.staff-panel    { flex-grow: 1; }
+
+/* --- FARE ÜZERİNE GELİNCE (HOVER) DURUMU --- */
+.login-container:hover .login-section {
+    flex-grow: 1;
+}
+.login-container:hover .login-section:hover {
+    flex-grow: 8;
+}
+
+
+/* =================================================================== */
+/* ============= YENİ DİNAMİK BAŞLIK MANTIĞI BURADA ============= */
+/* =================================================================== */
+
+/* 1. KURAL (VARSAYILAN): Bütün başlıklar DARMIŞ gibi başlasın, yani DİKEY olsun. */
+.login-section h1, .login-section h2 {
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 5px;
+    white-space: nowrap; /* Yazının bölünmesini engelle */
+    
+    /* Varsayılan (dar) durum: DİKEY YAZI */
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    
+    /* Tüm değişiklikler için yumuşak animasyon */
+    transition: all 0.4s ease-in-out;
+    margin: auto;
+}
+
+/* 2. KURAL (İSTİSNA): Ama sayfa ilk yüklendiğinde Hospital paneli geniş. 
+   Bu yüzden SADECE onun başlığını yatay yap. */
+.hospital-panel h1 {
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    letter-spacing: normal;
+    font-size: 4em;
+}
+
+/* 3. KURAL (ANA KURAL): Fare hangi bölümün üzerine gelirse, o bölüm GENİŞLER. 
+   Genişleyen bölümün başlığını YATAY yap. Bu kural diğerlerini ezer. */
+.login-container:hover .login-section:hover h1,
+.login-container:hover .login-section:hover h2 {
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    letter-spacing: normal;
+    font-size: 4em; /* Genişleyince font boyutu biraz daha büyük olabilir */
+}
+
+/* Fare başka bir bölümün üzerindeyken, hospital paneli daralır ve başlığı dikey hale gelir. */
+.login-container:hover .hospital-panel:not(:hover) h1 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    letter-spacing: 5px;
+    font-size: 4em; /* Diğer dikey başlıklarla aynı boyuta gelmesi için */
+}
+
+
+/* --- GİRİŞ FORMU STİLLERİ (DEĞİŞİKLİK YOK) --- */
+.login-form, .register-form {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(15px);
+    transition: opacity 0.4s ease-out 0.2s, transform 0.4s ease-out 0.2s;
+}
+
+.login-container:hover .login-section:hover .login-form, .login-container:hover .login-section:hover .register-form {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.login-form input, .login-form button, .register-form input, .register-form button {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+.login-form button, .register-form button {
+    background-color: #c06c84;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover, .register-form button:hover {
+    background-color: #f8b195;
+}
+
+.login-form a, .register-form a{
+    color: #f0f8ff;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.hidden-form {
+    display: none;
+}

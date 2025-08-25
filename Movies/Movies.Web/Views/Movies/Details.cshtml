@@ -1,0 +1,84 @@
+@model Movies.Web.Models.Movie
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+@{
+    ViewData["Title"] = "Film Detayları";
+    var actors = ViewBag.Actors as List<SelectListItem> ?? new List<SelectListItem>();
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movies DB Portal</title>
+    <link rel="stylesheet" href="~/css/MoviesIndex.css">
+</head>
+
+<body>
+    <nav class="top-menu">
+        <a href="/">🏠 Anasayfa</a>
+        <a href="/Movies">🎞 Filmler</a>
+        <a href="/Actors">🎭 Oyuncular</a>
+        <a href="/Report">🎬 Film Raporları</a>
+    </nav>
+    <div class="container mt-4">
+        <h2 class="text-primary">@Model.Ad</h2>
+        <p><strong>Tür:</strong> @Model.Tur</p>
+        <p><strong>Yıl:</strong> @Model.Yil</p>
+
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Error"]</div>
+        }
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success">@TempData["Success"]</div>
+        }
+
+        <hr />
+        <h4>Oyuncular</h4>
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Rol</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ma in Model.MovieActors)
+                {
+                    <tr>
+                        <td>@ma.Actor.Ad</td>
+                        <td>@ma.Actor.Soyad</td>
+                        <td>@ma.Rol</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <hr />
+        <h4>Oyuncu Ekle</h4>
+        <form asp-action="AddActor" method="post" class="row g-2 align-items-center">
+            <input type="hidden" name="movieId" value="@Model.MovieId" />
+            <div class="col-md-4">
+                <select name="actorId" class="form-select" required>
+                    <option value="">Oyuncu Seçin...</option>
+                    @foreach (var actor in actors)
+                    {
+                        <option value="@actor.Value">@actor.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-4">
+                <input type="text" name="rol" class="form-control" placeholder="Rolü girin" required />
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-success">Ekle</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

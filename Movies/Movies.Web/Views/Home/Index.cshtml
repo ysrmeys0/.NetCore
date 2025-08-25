@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;  /* Layout kullanmıyoruz */
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies DB Portal</title>
+    <link rel="stylesheet" href="~/css/Index.css">
+
+</head>
+<body>
+    <header>
+        <h1>🎬 Movies DB Portal</h1>
+        <p>Filmler, Oyuncular ve Roller için yönetim paneli</p>
+    </header>
+
+    <nav class="menu">
+        <a href="/Movies/Create">+ Film Ekle</a>
+        <a href="/Actors/Create">+ Oyuncu Ekle</a>
+        <a href="/Movies">🎞 Film Listesi</a>
+        <a href="/Actors">🎭 Oyuncu Listesi</a>
+        <a href="/Report">🎬 Film Raporları</a>
+    </nav>
+
+    <section class="cards">
+        <div class="card">
+            <h3>Toplam Filmler</h3>
+            <p>📽 @ViewBag.TotalMovies</p>
+        </div>
+        <div class="card">
+            <h3>Toplam Oyuncular</h3>
+            <p>🎭 @ViewBag.TotalActors</p>
+        </div>
+        <div class="card">
+            <h3>İlişkilendirmeler</h3>
+            <p>🔗 @ViewBag.TotalMovieActors</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Movies Database Portal
+    </footer>
+</body>
+</html>

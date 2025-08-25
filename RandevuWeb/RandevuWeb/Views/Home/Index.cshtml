@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hastane Giriş Ekranı</title>
+    <link rel="stylesheet" href="~/css/Index.css" />
+</head>
+<body>
+
+    <div class="login-container">
+        
+        <div class="login-section hospital-panel">
+            <div class="content">
+                <h1>Hospital</h1>
+            </div>
+        </div>
+
+        <div class="login-section patient-panel">
+            <div class="content">
+                <div id="login-form-wrapper">
+                    <h2>Hasta Girişi</h2>
+                    <form class="login-form">
+                        <input type="text" name="Email" placeholder="E-posta" required>
+                        <input type="text" name="PhoneNumber" placeholder="Telefon Numarası" required>
+                        <button type="submit">Giriş Yap</button>
+                        <button type="button" id="show-register-form">Kayıt Ol</button>
+                    </form>
+                </div>
+
+                <div id="register-form-wrapper" class="hidden-form">
+                    <h2>Hasta Kayıt</h2>
+                    <form class="register-form">
+                        <input type="text" name="Name" placeholder="Adınız" required>
+                        <input type="text" name="Surname" placeholder="Soyadınız" required>
+                        <select name="Gender" required>
+                            <option value="">Cinsiyet Seçin</option>
+                            <option value="1">Erkek</option>
+                            <option value="2">Kadın</option>
+                        </select>
+                        <input type="text" name="Email" placeholder="E-posta" required>
+                        <input type="text" name="PhoneNumber" placeholder="Telefon Numarası" required>
+                        <button type="submit">Kayıt Ol</button>
+                        <button type="button" id="show-login-form">Giriş Yap</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="login-section staff-panel">
+            <div class="content">
+                <h2>İdari Giriş</h2>
+                <form class="login-form">
+                    <input type="text" name="Email" placeholder="E-posta" required>
+                    <input type="text" name="PhoneNumber" placeholder="Telefon Numarası" required>
+                    <button type="submit">Giriş Yap</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/js/Index.js"></script>
+
+</body>
+</html>
+

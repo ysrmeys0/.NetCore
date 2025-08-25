@@ -1,0 +1,482 @@
+2025-08-25 02:03:05.198 +03:00 [INF] User profile is available. Using '/Users/ysrmeys/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-08-25 02:03:05.235 +03:00 [INF] Now listening on: http://localhost:5112
+2025-08-25 02:03:05.237 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-25 02:03:05.237 +03:00 [INF] Hosting environment: Development
+2025-08-25 02:03:05.237 +03:00 [INF] Content root path: /Users/ysrmeys/Desktop/Movies/Movies.Web
+2025-08-25 02:03:14.646 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Home/Index - null null
+2025-08-25 02:03:14.651 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-25 02:03:14.659 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 02:03:14.669 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.HomeController (Movies.Web).
+2025-08-25 02:03:15.125 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Movies] AS [m]
+2025-08-25 02:03:15.140 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Actors] AS [a]
+2025-08-25 02:03:15.143 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [MovieActors] AS [m]
+2025-08-25 02:03:15.147 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 02:03:15.164 +03:00 [INF] Executed ViewResult - view Index executed in 16.5937ms.
+2025-08-25 02:03:15.164 +03:00 [INF] Executed action Movies.Web.Controllers.HomeController.Index (Movies.Web) in 495.1598ms
+2025-08-25 02:03:15.164 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 02:03:15.167 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Home/Index - 200 null text/html; charset=utf-8 522.1337ms
+2025-08-25 02:03:15.187 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/css/Index.css - null null
+2025-08-25 02:03:15.194 +03:00 [INF] Sending file. Request path: '/css/Index.css'. Physical path: '/Users/ysrmeys/Desktop/Movies/Movies.Web/wwwroot/css/Index.css'
+2025-08-25 02:03:15.195 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/css/Index.css - 200 1173 text/css 8.019ms
+2025-08-25 02:03:16.520 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Movies - null null
+2025-08-25 02:03:16.524 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.MoviesController.Index (Movies.Web)'
+2025-08-25 02:03:16.527 +03:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.MoviesController (Movies.Web).
+2025-08-25 02:03:16.531 +03:00 [INF] Movies Index sayfası görüntülendi.
+2025-08-25 02:03:16.648 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MovieId], [m].[Ad], [m].[Tur], [m].[Yil], [s].[MovieId], [s].[ActorId], [s].[Rol], [s].[ActorId0], [s].[Ad], [s].[Soyad]
+FROM [Movies] AS [m]
+LEFT JOIN (
+    SELECT [m0].[MovieId], [m0].[ActorId], [m0].[Rol], [a].[ActorId] AS [ActorId0], [a].[Ad], [a].[Soyad]
+    FROM [MovieActors] AS [m0]
+    INNER JOIN [Actors] AS [a] ON [m0].[ActorId] = [a].[ActorId]
+) AS [s] ON [m].[MovieId] = [s].[MovieId]
+ORDER BY [m].[MovieId], [s].[MovieId], [s].[ActorId]
+2025-08-25 02:03:16.688 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 02:03:16.766 +03:00 [INF] Executed ViewResult - view Index executed in 78.288ms.
+2025-08-25 02:03:16.766 +03:00 [INF] Executed action Movies.Web.Controllers.MoviesController.Index (Movies.Web) in 238.7627ms
+2025-08-25 02:03:16.766 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.MoviesController.Index (Movies.Web)'
+2025-08-25 02:03:16.767 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Movies - 200 null text/html; charset=utf-8 246.7214ms
+2025-08-25 02:03:16.790 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/css/MoviesIndex.css - null null
+2025-08-25 02:03:16.793 +03:00 [INF] The file /css/MoviesIndex.css was not modified
+2025-08-25 02:03:16.794 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/css/MoviesIndex.css - 304 null text/css 3.6999ms
+2025-08-25 02:04:04.360 +03:00 [INF] Application is shutting down...
+2025-08-25 02:13:15.701 +03:00 [INF] User profile is available. Using '/Users/ysrmeys/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-08-25 02:13:15.739 +03:00 [INF] Now listening on: http://localhost:5112
+2025-08-25 02:13:15.740 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-25 02:13:15.740 +03:00 [INF] Hosting environment: Development
+2025-08-25 02:13:15.740 +03:00 [INF] Content root path: /Users/ysrmeys/Desktop/Movies/Movies.Web
+2025-08-25 02:13:52.700 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Home/Index - null null
+2025-08-25 02:13:52.707 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-25 02:13:52.716 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 02:13:52.728 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.HomeController (Movies.Web).
+2025-08-25 02:13:53.181 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Movies] AS [m]
+2025-08-25 02:13:53.192 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Actors] AS [a]
+2025-08-25 02:13:53.196 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [MovieActors] AS [m]
+2025-08-25 02:13:53.204 +03:00 [INF] Home Index sayfası görüntülendi. ToplamFilmler=7, ToplamOyuncular=12, Toplamİlişkilendirmeler=16
+2025-08-25 02:13:53.208 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 02:13:53.224 +03:00 [INF] Executed ViewResult - view Index executed in 16.0362ms.
+2025-08-25 02:13:53.225 +03:00 [INF] Executed action Movies.Web.Controllers.HomeController.Index (Movies.Web) in 496.8333ms
+2025-08-25 02:13:53.225 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 02:13:53.228 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Home/Index - 200 null text/html; charset=utf-8 528.4402ms
+2025-08-25 02:14:05.931 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Movies - null null
+2025-08-25 02:14:05.934 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.MoviesController.Index (Movies.Web)'
+2025-08-25 02:14:05.936 +03:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.MoviesController (Movies.Web).
+2025-08-25 02:14:05.939 +03:00 [INF] Movies Index sayfası görüntülendi.
+2025-08-25 02:14:05.998 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MovieId], [m].[Ad], [m].[Tur], [m].[Yil]
+FROM [Movies] AS [m]
+2025-08-25 02:14:06.015 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 02:14:06.105 +03:00 [INF] Executed ViewResult - view Index executed in 89.8553ms.
+2025-08-25 02:14:06.105 +03:00 [INF] Executed action Movies.Web.Controllers.MoviesController.Index (Movies.Web) in 169.1978ms
+2025-08-25 02:14:06.106 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.MoviesController.Index (Movies.Web)'
+2025-08-25 02:14:06.106 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Movies - 200 null text/html; charset=utf-8 174.8317ms
+2025-08-25 02:14:06.134 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/css/MoviesIndex.css - null null
+2025-08-25 02:14:06.137 +03:00 [INF] The file /css/MoviesIndex.css was not modified
+2025-08-25 02:14:06.139 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/css/MoviesIndex.css - 304 null text/css 4.704ms
+2025-08-25 02:14:12.292 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Movies/Create - null null
+2025-08-25 02:14:12.293 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.MoviesController.Create (Movies.Web)'
+2025-08-25 02:14:12.294 +03:00 [INF] Route matched with {action = "Create", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller Movies.Web.Controllers.MoviesController (Movies.Web).
+2025-08-25 02:14:12.297 +03:00 [INF] Create sayfası açıldı.
+2025-08-25 02:14:12.299 +03:00 [INF] Executing ViewResult, running view Create.
+2025-08-25 02:14:12.335 +03:00 [INF] Executed ViewResult - view Create executed in 37.8037ms.
+2025-08-25 02:14:12.336 +03:00 [INF] Executed action Movies.Web.Controllers.MoviesController.Create (Movies.Web) in 41.4191ms
+2025-08-25 02:14:12.336 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.MoviesController.Create (Movies.Web)'
+2025-08-25 02:14:12.336 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Movies/Create - 200 null text/html; charset=utf-8 44.1714ms
+2025-08-25 02:14:12.355 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2025-08-25 02:14:12.355 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2025-08-25 02:14:12.366 +03:00 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js'. Physical path: '/Users/ysrmeys/Desktop/Movies/Movies.Web/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js'
+2025-08-25 02:14:12.366 +03:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: '/Users/ysrmeys/Desktop/Movies/Movies.Web/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js'
+2025-08-25 02:14:12.367 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/lib/jquery-validation/dist/jquery.validate.min.js - 200 24601 text/javascript 12.2043ms
+2025-08-25 02:14:12.367 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 200 5824 text/javascript 12.0007ms
+2025-08-25 02:14:15.792 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/ - null null
+2025-08-25 02:14:15.793 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 02:14:15.793 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.HomeController (Movies.Web).
+2025-08-25 02:14:15.810 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Movies] AS [m]
+2025-08-25 02:14:15.813 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Actors] AS [a]
+2025-08-25 02:14:15.817 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [MovieActors] AS [m]
+2025-08-25 02:14:15.818 +03:00 [INF] Home Index sayfası görüntülendi. ToplamFilmler=7, ToplamOyuncular=12, Toplamİlişkilendirmeler=16
+2025-08-25 02:14:15.818 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 02:14:15.819 +03:00 [INF] Executed ViewResult - view Index executed in 0.9456ms.
+2025-08-25 02:14:15.820 +03:00 [INF] Executed action Movies.Web.Controllers.HomeController.Index (Movies.Web) in 26.1939ms
+2025-08-25 02:14:15.820 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 02:14:15.820 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/ - 200 null text/html; charset=utf-8 27.7072ms
+2025-08-25 02:14:22.265 +03:00 [INF] Application is shutting down...
+2025-08-25 02:17:52.797 +03:00 [INF] User profile is available. Using '/Users/ysrmeys/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-08-25 02:17:52.830 +03:00 [INF] Now listening on: http://localhost:5112
+2025-08-25 02:17:52.831 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-25 02:17:52.831 +03:00 [INF] Hosting environment: Development
+2025-08-25 02:17:52.831 +03:00 [INF] Content root path: /Users/ysrmeys/Desktop/Movies/Movies.Web
+2025-08-25 02:18:08.527 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/ - null null
+2025-08-25 02:18:08.533 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-25 02:18:08.540 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 02:18:08.550 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.HomeController (Movies.Web).
+2025-08-25 02:18:09.004 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Movies] AS [m]
+2025-08-25 02:18:09.016 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Actors] AS [a]
+2025-08-25 02:18:09.018 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [MovieActors] AS [m]
+2025-08-25 02:18:09.027 +03:00 [INF] Home Index sayfası görüntülendi. ToplamFilmler=7, ToplamOyuncular=12, Toplamİlişkilendirmeler=16
+2025-08-25 02:18:09.030 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 02:18:09.049 +03:00 [INF] Executed ViewResult - view Index executed in 19.1798ms.
+2025-08-25 02:18:09.050 +03:00 [INF] Executed action Movies.Web.Controllers.HomeController.Index (Movies.Web) in 499.6234ms
+2025-08-25 02:18:09.050 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 02:18:09.052 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/ - 200 null text/html; charset=utf-8 526.7002ms
+2025-08-25 02:18:10.890 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Movies - null null
+2025-08-25 02:18:10.893 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.MoviesController.Index (Movies.Web)'
+2025-08-25 02:18:10.897 +03:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.MoviesController (Movies.Web).
+2025-08-25 02:18:10.899 +03:00 [INF] Movies Index sayfası görüntülendi.
+2025-08-25 02:18:10.961 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MovieId], [m].[Ad], [m].[Tur], [m].[Yil]
+FROM [Movies] AS [m]
+2025-08-25 02:18:10.979 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 02:18:11.069 +03:00 [INF] Executed ViewResult - view Index executed in 90.0064ms.
+2025-08-25 02:18:11.069 +03:00 [INF] Executed action Movies.Web.Controllers.MoviesController.Index (Movies.Web) in 172.1402ms
+2025-08-25 02:18:11.069 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.MoviesController.Index (Movies.Web)'
+2025-08-25 02:18:11.069 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Movies - 200 null text/html; charset=utf-8 179.2571ms
+2025-08-25 02:18:15.514 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Actors - null null
+2025-08-25 02:18:15.516 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.ActorsController.Index (Movies.Web)'
+2025-08-25 02:18:15.518 +03:00 [INF] Route matched with {action = "Index", controller = "Actors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.ActorsController (Movies.Web).
+2025-08-25 02:18:15.520 +03:00 [INF] Actors Index sayfası görüntülendi.
+2025-08-25 02:18:15.531 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ActorId], [a].[Ad], [a].[Soyad]
+FROM [Actors] AS [a]
+2025-08-25 02:18:15.537 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MovieId], [m].[Ad], [m].[Tur], [m].[Yil]
+FROM [Movies] AS [m]
+2025-08-25 02:18:15.539 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 02:18:15.559 +03:00 [INF] Executed ViewResult - view Index executed in 19.569ms.
+2025-08-25 02:18:15.559 +03:00 [INF] Executed action Movies.Web.Controllers.ActorsController.Index (Movies.Web) in 40.874ms
+2025-08-25 02:18:15.559 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.ActorsController.Index (Movies.Web)'
+2025-08-25 02:18:15.559 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Actors - 200 null text/html; charset=utf-8 45.1307ms
+2025-08-25 02:18:17.179 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Actors/Create - null null
+2025-08-25 02:18:17.179 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.ActorsController.Create (Movies.Web)'
+2025-08-25 02:18:17.181 +03:00 [INF] Route matched with {action = "Create", controller = "Actors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller Movies.Web.Controllers.ActorsController (Movies.Web).
+2025-08-25 02:18:17.182 +03:00 [INF] Actor Create sayfası açıldı.
+2025-08-25 02:18:17.183 +03:00 [INF] Executing ViewResult, running view Create.
+2025-08-25 02:18:17.210 +03:00 [INF] Executed ViewResult - view Create executed in 28.2758ms.
+2025-08-25 02:18:17.210 +03:00 [INF] Executed action Movies.Web.Controllers.ActorsController.Create (Movies.Web) in 29.1435ms
+2025-08-25 02:18:17.210 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.ActorsController.Create (Movies.Web)'
+2025-08-25 02:18:17.211 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Actors/Create - 200 null text/html; charset=utf-8 31.5667ms
+2025-08-25 02:18:53.356 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5112/Actors/Create - application/x-www-form-urlencoded 204
+2025-08-25 02:18:53.359 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.ActorsController.Create (Movies.Web)'
+2025-08-25 02:18:53.369 +03:00 [INF] Route matched with {action = "Create", controller = "Actors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(Movies.Web.Models.Actor) on controller Movies.Web.Controllers.ActorsController (Movies.Web).
+2025-08-25 02:18:53.444 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Actors] ([Ad], [Soyad])
+OUTPUT INSERTED.[ActorId]
+VALUES (@p0, @p1);
+2025-08-25 02:18:53.451 +03:00 [INF] Yeni oyuncu eklendi: Gary  Oldman
+2025-08-25 02:18:53.451 +03:00 [INF] Executing RedirectResult, redirecting to /Actors.
+2025-08-25 02:18:53.451 +03:00 [INF] Executed action Movies.Web.Controllers.ActorsController.Create (Movies.Web) in 82.2075ms
+2025-08-25 02:18:53.451 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.ActorsController.Create (Movies.Web)'
+2025-08-25 02:18:53.451 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5112/Actors/Create - 302 0 null 95.3314ms
+2025-08-25 02:18:53.455 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Actors - null null
+2025-08-25 02:18:53.455 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.ActorsController.Index (Movies.Web)'
+2025-08-25 02:18:53.455 +03:00 [INF] Route matched with {action = "Index", controller = "Actors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.ActorsController (Movies.Web).
+2025-08-25 02:18:53.455 +03:00 [INF] Actors Index sayfası görüntülendi.
+2025-08-25 02:18:53.460 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ActorId], [a].[Ad], [a].[Soyad]
+FROM [Actors] AS [a]
+2025-08-25 02:18:53.463 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MovieId], [m].[Ad], [m].[Tur], [m].[Yil]
+FROM [Movies] AS [m]
+2025-08-25 02:18:53.464 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 02:18:53.465 +03:00 [INF] Executed ViewResult - view Index executed in 1.6129ms.
+2025-08-25 02:18:53.465 +03:00 [INF] Executed action Movies.Web.Controllers.ActorsController.Index (Movies.Web) in 9.998ms
+2025-08-25 02:18:53.465 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.ActorsController.Index (Movies.Web)'
+2025-08-25 02:18:53.465 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Actors - 200 null text/html; charset=utf-8 10.313ms
+2025-08-25 02:19:09.252 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5112/Actors/AddToMovie - application/x-www-form-urlencoded 220
+2025-08-25 02:19:09.253 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.ActorsController.AddToMovie (Movies.Web)'
+2025-08-25 02:19:09.255 +03:00 [INF] Route matched with {action = "AddToMovie", controller = "Actors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddToMovie(Int32, Int32, System.String) on controller Movies.Web.Controllers.ActorsController (Movies.Web).
+2025-08-25 02:19:09.290 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__actorId_0='?' (DbType = Int32), @__movieId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [MovieActors] AS [m]
+        WHERE [m].[ActorId] = @__actorId_0 AND [m].[MovieId] = @__movieId_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-08-25 02:19:09.302 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [MovieActors] ([ActorId], [MovieId], [Rol])
+VALUES (@p0, @p1, @p2);
+2025-08-25 02:19:09.302 +03:00 [INF] Oyuncu filme eklendi: ActorId=14, MovieId=1, Rol=Sirius Black
+2025-08-25 02:19:09.302 +03:00 [INF] Executing RedirectResult, redirecting to /Actors.
+2025-08-25 02:19:09.305 +03:00 [INF] Executed action Movies.Web.Controllers.ActorsController.AddToMovie (Movies.Web) in 49.2884ms
+2025-08-25 02:19:09.305 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.ActorsController.AddToMovie (Movies.Web)'
+2025-08-25 02:19:09.305 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5112/Actors/AddToMovie - 302 0 null 53.1055ms
+2025-08-25 02:19:09.307 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Actors - null null
+2025-08-25 02:19:09.307 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.ActorsController.Index (Movies.Web)'
+2025-08-25 02:19:09.307 +03:00 [INF] Route matched with {action = "Index", controller = "Actors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.ActorsController (Movies.Web).
+2025-08-25 02:19:09.307 +03:00 [INF] Actors Index sayfası görüntülendi.
+2025-08-25 02:19:09.310 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ActorId], [a].[Ad], [a].[Soyad]
+FROM [Actors] AS [a]
+2025-08-25 02:19:09.312 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MovieId], [m].[Ad], [m].[Tur], [m].[Yil]
+FROM [Movies] AS [m]
+2025-08-25 02:19:09.312 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 02:19:09.315 +03:00 [INF] Executed ViewResult - view Index executed in 3.3345ms.
+2025-08-25 02:19:09.315 +03:00 [INF] Executed action Movies.Web.Controllers.ActorsController.Index (Movies.Web) in 8.7122ms
+2025-08-25 02:19:09.316 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.ActorsController.Index (Movies.Web)'
+2025-08-25 02:19:09.316 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Actors - 200 null text/html; charset=utf-8 9.1045ms
+2025-08-25 02:19:10.280 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/ - null null
+2025-08-25 02:19:10.280 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 02:19:10.280 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.HomeController (Movies.Web).
+2025-08-25 02:19:10.285 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Movies] AS [m]
+2025-08-25 02:19:10.289 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Actors] AS [a]
+2025-08-25 02:19:10.294 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [MovieActors] AS [m]
+2025-08-25 02:19:10.294 +03:00 [INF] Home Index sayfası görüntülendi. ToplamFilmler=7, ToplamOyuncular=13, Toplamİlişkilendirmeler=17
+2025-08-25 02:19:10.295 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 02:19:10.295 +03:00 [INF] Executed ViewResult - view Index executed in 0.8283ms.
+2025-08-25 02:19:10.295 +03:00 [INF] Executed action Movies.Web.Controllers.HomeController.Index (Movies.Web) in 15.2915ms
+2025-08-25 02:19:10.295 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 02:19:10.296 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/ - 200 null text/html; charset=utf-8 16.0174ms
+2025-08-25 02:20:41.320 +03:00 [INF] Application is shutting down...
+2025-08-25 14:11:27.897 +03:00 [INF] User profile is available. Using '/Users/ysrmeys/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-08-25 14:11:27.927 +03:00 [INF] Now listening on: http://localhost:5112
+2025-08-25 14:11:27.928 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-25 14:11:27.928 +03:00 [INF] Hosting environment: Development
+2025-08-25 14:11:27.928 +03:00 [INF] Content root path: /Users/ysrmeys/Desktop/Movies/Movies.Web
+2025-08-25 14:11:42.352 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/ - null null
+2025-08-25 14:11:42.358 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-08-25 14:11:42.365 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 14:11:42.377 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.HomeController (Movies.Web).
+2025-08-25 14:11:42.819 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Movies] AS [m]
+2025-08-25 14:11:42.829 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Actors] AS [a]
+2025-08-25 14:11:42.832 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [MovieActors] AS [m]
+2025-08-25 14:11:42.841 +03:00 [INF] Home Index sayfası görüntülendi. ToplamFilmler=7, ToplamOyuncular=13, Toplamİlişkilendirmeler=17
+2025-08-25 14:11:42.844 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 14:11:42.861 +03:00 [INF] Executed ViewResult - view Index executed in 17.6735ms.
+2025-08-25 14:11:42.862 +03:00 [INF] Executed action Movies.Web.Controllers.HomeController.Index (Movies.Web) in 484.8188ms
+2025-08-25 14:11:42.862 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 14:11:42.865 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/ - 200 null text/html; charset=utf-8 513.2662ms
+2025-08-25 14:11:42.870 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/css/Index.css - null null
+2025-08-25 14:11:42.872 +03:00 [INF] The file /css/Index.css was not modified
+2025-08-25 14:11:42.872 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/css/Index.css - 304 null text/css 2.3105ms
+2025-08-25 14:11:43.626 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Home/Index - null null
+2025-08-25 14:11:43.629 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 14:11:43.629 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.HomeController (Movies.Web).
+2025-08-25 14:11:43.671 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Movies] AS [m]
+2025-08-25 14:11:43.675 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Actors] AS [a]
+2025-08-25 14:11:43.677 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [MovieActors] AS [m]
+2025-08-25 14:11:43.677 +03:00 [INF] Home Index sayfası görüntülendi. ToplamFilmler=7, ToplamOyuncular=13, Toplamİlişkilendirmeler=17
+2025-08-25 14:11:43.678 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 14:11:43.680 +03:00 [INF] Executed ViewResult - view Index executed in 2.707ms.
+2025-08-25 14:11:43.680 +03:00 [INF] Executed action Movies.Web.Controllers.HomeController.Index (Movies.Web) in 50.2407ms
+2025-08-25 14:11:43.680 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 14:11:43.680 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Home/Index - 200 null text/html; charset=utf-8 54.5045ms
+2025-08-25 14:11:49.094 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Movies - null null
+2025-08-25 14:11:49.096 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.MoviesController.Index (Movies.Web)'
+2025-08-25 14:11:49.099 +03:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.MoviesController (Movies.Web).
+2025-08-25 14:11:49.103 +03:00 [INF] Movies Index sayfası görüntülendi.
+2025-08-25 14:11:49.151 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MovieId], [m].[Ad], [m].[Tur], [m].[Yil]
+FROM [Movies] AS [m]
+2025-08-25 14:11:49.170 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 14:11:49.258 +03:00 [INF] Executed ViewResult - view Index executed in 88.3213ms.
+2025-08-25 14:11:49.258 +03:00 [INF] Executed action Movies.Web.Controllers.MoviesController.Index (Movies.Web) in 158.6523ms
+2025-08-25 14:11:49.258 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.MoviesController.Index (Movies.Web)'
+2025-08-25 14:11:49.258 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Movies - 200 null text/html; charset=utf-8 164.1242ms
+2025-08-25 14:11:49.280 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2025-08-25 14:11:49.280 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-08-25 14:11:49.281 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - null null
+2025-08-25 14:11:49.281 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/css/MoviesIndex.css - null null
+2025-08-25 14:11:49.281 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/lib/jquery/dist/jquery.min.js - null null
+2025-08-25 14:11:49.281 +03:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2025-08-25 14:11:49.281 +03:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2025-08-25 14:11:49.282 +03:00 [INF] The file /js/site.js was not modified
+2025-08-25 14:11:49.281 +03:00 [INF] The file /css/site.css was not modified
+2025-08-25 14:11:49.282 +03:00 [INF] The file /css/MoviesIndex.css was not modified
+2025-08-25 14:11:49.282 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/lib/bootstrap/dist/css/bootstrap.min.css - 304 null text/css 1.1042ms
+2025-08-25 14:11:49.282 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 304 null text/javascript 1.2156ms
+2025-08-25 14:11:49.282 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/lib/jquery/dist/jquery.min.js - 304 null text/javascript 0.5554ms
+2025-08-25 14:11:49.282 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/css/MoviesIndex.css - 304 null text/css 0.5249ms
+2025-08-25 14:11:49.282 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - 304 null text/css 0.6602ms
+2025-08-25 14:11:49.282 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-08-25 14:11:49.282 +03:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2025-08-25 14:11:49.282 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 304 null text/javascript 0.1869ms
+2025-08-25 14:11:51.569 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Movies/Create - null null
+2025-08-25 14:11:51.570 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.MoviesController.Create (Movies.Web)'
+2025-08-25 14:11:51.573 +03:00 [INF] Route matched with {action = "Create", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller Movies.Web.Controllers.MoviesController (Movies.Web).
+2025-08-25 14:11:51.573 +03:00 [INF] Create sayfası açıldı.
+2025-08-25 14:11:51.575 +03:00 [INF] Executing ViewResult, running view Create.
+2025-08-25 14:11:51.608 +03:00 [INF] Executed ViewResult - view Create executed in 34.4598ms.
+2025-08-25 14:11:51.608 +03:00 [INF] Executed action Movies.Web.Controllers.MoviesController.Create (Movies.Web) in 35.3002ms
+2025-08-25 14:11:51.608 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.MoviesController.Create (Movies.Web)'
+2025-08-25 14:11:51.608 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Movies/Create - 200 null text/html; charset=utf-8 39.0503ms
+2025-08-25 14:11:51.624 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2025-08-25 14:11:51.625 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2025-08-25 14:11:51.625 +03:00 [INF] The file /lib/jquery-validation/dist/jquery.validate.min.js was not modified
+2025-08-25 14:11:51.625 +03:00 [INF] The file /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js was not modified
+2025-08-25 14:11:51.625 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/lib/jquery-validation/dist/jquery.validate.min.js - 304 null text/javascript 0.989ms
+2025-08-25 14:11:51.625 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 304 null text/javascript 0.739ms
+2025-08-25 14:11:54.410 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Movies/Details/1 - null null
+2025-08-25 14:11:54.411 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.MoviesController.Details (Movies.Web)'
+2025-08-25 14:11:54.418 +03:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(System.Nullable`1[System.Int32]) on controller Movies.Web.Controllers.MoviesController (Movies.Web).
+2025-08-25 14:11:54.539 +03:00 [INF] Executed DbCommand (48ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m1].[MovieId], [m1].[Ad], [m1].[Tur], [m1].[Yil], [s].[MovieId], [s].[ActorId], [s].[Rol], [s].[ActorId0], [s].[Ad], [s].[Soyad]
+FROM (
+    SELECT TOP(1) [m].[MovieId], [m].[Ad], [m].[Tur], [m].[Yil]
+    FROM [Movies] AS [m]
+    WHERE [m].[MovieId] = @__id_0
+) AS [m1]
+LEFT JOIN (
+    SELECT [m0].[MovieId], [m0].[ActorId], [m0].[Rol], [a].[ActorId] AS [ActorId0], [a].[Ad], [a].[Soyad]
+    FROM [MovieActors] AS [m0]
+    INNER JOIN [Actors] AS [a] ON [m0].[ActorId] = [a].[ActorId]
+) AS [s] ON [m1].[MovieId] = [s].[MovieId]
+ORDER BY [m1].[MovieId], [s].[MovieId], [s].[ActorId]
+2025-08-25 14:11:54.569 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CONVERT(varchar(11), [a].[ActorId]) AS [Value], [a].[Ad] + N' ' + [a].[Soyad] AS [Text]
+FROM [Actors] AS [a]
+2025-08-25 14:11:54.571 +03:00 [INF] Details sayfası görüntülendi. MovieId=1
+2025-08-25 14:11:54.571 +03:00 [INF] Executing ViewResult, running view Details.
+2025-08-25 14:11:54.577 +03:00 [INF] Executed ViewResult - view Details executed in 6.2033ms.
+2025-08-25 14:11:54.578 +03:00 [INF] Executed action Movies.Web.Controllers.MoviesController.Details (Movies.Web) in 159.1331ms
+2025-08-25 14:11:54.578 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.MoviesController.Details (Movies.Web)'
+2025-08-25 14:11:54.578 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Movies/Details/1 - 200 null text/html; charset=utf-8 167.7838ms
+2025-08-25 14:12:00.915 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Movies/Edit/1 - null null
+2025-08-25 14:12:00.917 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.MoviesController.Edit (Movies.Web)'
+2025-08-25 14:12:00.919 +03:00 [INF] Route matched with {action = "Edit", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Edit(System.Nullable`1[System.Int32]) on controller Movies.Web.Controllers.MoviesController (Movies.Web).
+2025-08-25 14:12:00.939 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[MovieId], [m].[Ad], [m].[Tur], [m].[Yil]
+FROM [Movies] AS [m]
+WHERE [m].[MovieId] = @__p_0
+2025-08-25 14:12:00.939 +03:00 [INF] Edit sayfası açıldı. MovieId=1
+2025-08-25 14:12:00.939 +03:00 [INF] Executing ViewResult, running view Edit.
+2025-08-25 14:12:00.948 +03:00 [INF] Executed ViewResult - view Edit executed in 8.4752ms.
+2025-08-25 14:12:00.948 +03:00 [INF] Executed action Movies.Web.Controllers.MoviesController.Edit (Movies.Web) in 28.7862ms
+2025-08-25 14:12:00.948 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.MoviesController.Edit (Movies.Web)'
+2025-08-25 14:12:00.948 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Movies/Edit/1 - 200 null text/html; charset=utf-8 32.417ms
+2025-08-25 14:12:04.985 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Actors - null null
+2025-08-25 14:12:04.985 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.ActorsController.Index (Movies.Web)'
+2025-08-25 14:12:04.987 +03:00 [INF] Route matched with {action = "Index", controller = "Actors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.ActorsController (Movies.Web).
+2025-08-25 14:12:04.989 +03:00 [INF] Actors Index sayfası görüntülendi.
+2025-08-25 14:12:05.006 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ActorId], [a].[Ad], [a].[Soyad]
+FROM [Actors] AS [a]
+2025-08-25 14:12:05.011 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MovieId], [m].[Ad], [m].[Tur], [m].[Yil]
+FROM [Movies] AS [m]
+2025-08-25 14:12:05.015 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 14:12:05.033 +03:00 [INF] Executed ViewResult - view Index executed in 18.0216ms.
+2025-08-25 14:12:05.033 +03:00 [INF] Executed action Movies.Web.Controllers.ActorsController.Index (Movies.Web) in 45.8977ms
+2025-08-25 14:12:05.033 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.ActorsController.Index (Movies.Web)'
+2025-08-25 14:12:05.033 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Actors - 200 null text/html; charset=utf-8 48.8565ms
+2025-08-25 14:12:13.076 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Actors/Create - null null
+2025-08-25 14:12:13.077 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.ActorsController.Create (Movies.Web)'
+2025-08-25 14:12:13.079 +03:00 [INF] Route matched with {action = "Create", controller = "Actors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller Movies.Web.Controllers.ActorsController (Movies.Web).
+2025-08-25 14:12:13.080 +03:00 [INF] Actor Create sayfası açıldı.
+2025-08-25 14:12:13.081 +03:00 [INF] Executing ViewResult, running view Create.
+2025-08-25 14:12:13.095 +03:00 [INF] Executed ViewResult - view Create executed in 15.339ms.
+2025-08-25 14:12:13.095 +03:00 [INF] Executed action Movies.Web.Controllers.ActorsController.Create (Movies.Web) in 16.7198ms
+2025-08-25 14:12:13.096 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.ActorsController.Create (Movies.Web)'
+2025-08-25 14:12:13.096 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Actors/Create - 200 null text/html; charset=utf-8 19.657ms
+2025-08-25 14:12:15.349 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Actors - null null
+2025-08-25 14:12:15.349 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.ActorsController.Index (Movies.Web)'
+2025-08-25 14:12:15.349 +03:00 [INF] Route matched with {action = "Index", controller = "Actors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.ActorsController (Movies.Web).
+2025-08-25 14:12:15.350 +03:00 [INF] Actors Index sayfası görüntülendi.
+2025-08-25 14:12:15.357 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ActorId], [a].[Ad], [a].[Soyad]
+FROM [Actors] AS [a]
+2025-08-25 14:12:15.362 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MovieId], [m].[Ad], [m].[Tur], [m].[Yil]
+FROM [Movies] AS [m]
+2025-08-25 14:12:15.363 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 14:12:15.365 +03:00 [INF] Executed ViewResult - view Index executed in 2.401ms.
+2025-08-25 14:12:15.365 +03:00 [INF] Executed action Movies.Web.Controllers.ActorsController.Index (Movies.Web) in 15.5975ms
+2025-08-25 14:12:15.365 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.ActorsController.Index (Movies.Web)'
+2025-08-25 14:12:15.365 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Actors - 200 null text/html; charset=utf-8 16.5009ms
+2025-08-25 14:12:17.193 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/Report - null null
+2025-08-25 14:12:17.194 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.ReportController.Index (Movies.Web)'
+2025-08-25 14:12:17.196 +03:00 [INF] Route matched with {action = "Index", controller = "Report"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.ReportController (Movies.Web).
+2025-08-25 14:12:17.239 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Ad], [m].[Tur], [m].[Yil], [m].[MovieId], [s].[AdSoyad], [s].[Rol], [s].[MovieId], [s].[ActorId], [s].[ActorId0]
+FROM [Movies] AS [m]
+LEFT JOIN (
+    SELECT [a].[Ad] + N' ' + [a].[Soyad] AS [AdSoyad], [m0].[Rol], [m0].[MovieId], [m0].[ActorId], [a].[ActorId] AS [ActorId0]
+    FROM [MovieActors] AS [m0]
+    INNER JOIN [Actors] AS [a] ON [m0].[ActorId] = [a].[ActorId]
+) AS [s] ON [m].[MovieId] = [s].[MovieId]
+ORDER BY [m].[MovieId], [s].[MovieId], [s].[ActorId]
+2025-08-25 14:12:17.241 +03:00 [INF] ReportController: MoviesGrouped verisi yüklendi. Toplam film sayısı=7
+2025-08-25 14:12:17.262 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Ad] + N' ' + [a].[Soyad], [a].[ActorId], [s].[Ad], [s].[Tur], [s].[Yil], [s].[Rol], [s].[MovieId], [s].[ActorId], [s].[MovieId0]
+FROM [Actors] AS [a]
+LEFT JOIN (
+    SELECT [m0].[Ad], [m0].[Tur], [m0].[Yil], [m].[Rol], [m].[MovieId], [m].[ActorId], [m0].[MovieId] AS [MovieId0]
+    FROM [MovieActors] AS [m]
+    INNER JOIN [Movies] AS [m0] ON [m].[MovieId] = [m0].[MovieId]
+) AS [s] ON [a].[ActorId] = [s].[ActorId]
+ORDER BY [a].[ActorId], [s].[MovieId], [s].[ActorId]
+2025-08-25 14:12:17.263 +03:00 [INF] ReportController: ActorsGrouped verisi yüklendi. Toplam oyuncu sayısı=13
+2025-08-25 14:12:17.264 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 14:12:17.267 +03:00 [INF] Executed ViewResult - view Index executed in 3.4956ms.
+2025-08-25 14:12:17.267 +03:00 [INF] Executed action Movies.Web.Controllers.ReportController.Index (Movies.Web) in 71.4641ms
+2025-08-25 14:12:17.267 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.ReportController.Index (Movies.Web)'
+2025-08-25 14:12:17.267 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/Report - 200 null text/html; charset=utf-8 73.7917ms
+2025-08-25 14:12:17.284 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/css/ReportIndex.css - null null
+2025-08-25 14:12:17.284 +03:00 [INF] The file /css/ReportIndex.css was not modified
+2025-08-25 14:12:17.285 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/css/ReportIndex.css - 304 null text/css 0.8275ms
+2025-08-25 14:12:28.955 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/ - null null
+2025-08-25 14:12:28.955 +03:00 [INF] Executing endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 14:12:28.955 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Movies.Web.Controllers.HomeController (Movies.Web).
+2025-08-25 14:12:28.962 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Movies] AS [m]
+2025-08-25 14:12:28.966 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Actors] AS [a]
+2025-08-25 14:12:28.970 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [MovieActors] AS [m]
+2025-08-25 14:12:28.970 +03:00 [INF] Home Index sayfası görüntülendi. ToplamFilmler=7, ToplamOyuncular=13, Toplamİlişkilendirmeler=17
+2025-08-25 14:12:28.970 +03:00 [INF] Executing ViewResult, running view Index.
+2025-08-25 14:12:28.971 +03:00 [INF] Executed ViewResult - view Index executed in 0.995ms.
+2025-08-25 14:12:28.972 +03:00 [INF] Executed action Movies.Web.Controllers.HomeController.Index (Movies.Web) in 16.3653ms
+2025-08-25 14:12:28.972 +03:00 [INF] Executed endpoint 'Movies.Web.Controllers.HomeController.Index (Movies.Web)'
+2025-08-25 14:12:28.972 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/ - 200 null text/html; charset=utf-8 17.2298ms
+2025-08-25 14:15:28.876 +03:00 [INF] Application is shutting down...
